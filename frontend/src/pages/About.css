@@ -1,0 +1,9 @@
+/* About.css */
+h1, h4 {
+  font-weight: bold;
+}
+
+p {
+  color: #555;
+  line-height: 1.6;
+}

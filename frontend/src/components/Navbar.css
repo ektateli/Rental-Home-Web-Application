@@ -1,0 +1,64 @@
+/* Enlarged Navbar with Gradient and Padding */
+.custom-navbar {
+  background: linear-gradient(to right, #e3edf7, #d2e4f2);
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem 0; /* Increased vertical padding */
+}
+
+/* Brand logo and name */
+.navbar-brand img {
+  height: 32px;
+}
+
+.navbar-brand span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Nav links spacing and styling */
+.navbar-nav .nav-link {
+  color: #1a1a1a;
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  background-color: #dbe9f4;
+  color: #2a80d0;
+  border-radius: 6px;
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+  color: #2a80d0;
+  background-color: rgba(42, 128, 208, 0.1);
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* Logout button styling */
+.btn-danger.btn-sm {
+  background-color: #d63031;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger.btn-sm:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive tweak: increase spacing on larger screens */
+@media (min-width: 992px) {
+  .custom-navbar {
+    padding: 1.5rem 0;
+  }
+}
