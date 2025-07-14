@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config(); 
 const bodyParser = require('body-parser');
 const propertyRoutes = require('./routes/propertyRoutes.js');
 const db = require('./config/db');
@@ -27,5 +28,13 @@ app.use('/api', paymentRoutes);
 app.use('/api', userRoutes);    
 app.use('/api',ownerBookingRoutes);
 
-const PORT = 5000;
+// ✅ Add a test route
+app.get('/', (req, res) => {
+  res.send('🚀 Backend is working!');
+});
+
+// ✅ Fix missing PORT assignment
+const PORT = process.env.PORT || 5000;
+
+// const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
